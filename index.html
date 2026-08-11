@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Voo Executivo — Tempo é poder.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="brand">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13.5 9.5L21 8L14.5 13L18 20L12 16.5L6 20L9.5 13L3 8L10.5 9.5L12 2Z" stroke="#C6A15B" stroke-width="1.1" stroke-linejoin="round"/></svg>
+      <span class="brand-text">VOO EXECUTIVO<span>TEMPO É PODER</span></span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#frota">Frota</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#membros">Membros</a>
+      <a href="#" class="nav-cta">Entrar</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO / SEARCH -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Aviação executiva sob demanda</span>
+        <h1>Seu próximo voo,<br><em>decidido em minutos.</em></h1>
+        <p class="lead">Reserve jatos executivos com concierge dedicado, tripulação selecionada e confirmação instantânea — de porta a porta, sem escalas em burocracia.</p>
+        <div class="hero-actions">
+          <a href="#buscar" class="btn-primary">Buscar voos →</a>
+          <a href="#frota" class="btn-ghost">Ver frota completa</a>
+        </div>
+
+        <div class="route-line">
+          <svg viewBox="0 0 460 40" fill="none">
+            <circle cx="10" cy="20" r="4" fill="#C6A15B"/>
+            <line x1="18" y1="20" x2="442" y2="20" stroke="#C6A15B" stroke-width="1" class="route-dash"/>
+            <circle cx="450" cy="20" r="4" fill="#C6A15B"/>
+            <path d="M420 14 L442 20 L420 26" stroke="#C6A15B" stroke-width="1"/>
+          </svg>
+          <div class="route-labels">
+            <div class="city">ORIGEM<b>São Paulo, GRU</b></div>
+            <div class="city" style="text-align:right">DESTINO<b>Miami, MIA</b></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="search-card" id="buscar">
+        <h3>Para onde vamos hoje?</h3>
+        <div class="field">
+          <label for="destino">Destino</label>
+          <input id="destino" type="text" placeholder="Ex.: Miami, EUA" value="Miami, EUA">
+        </div>
+        <div class="field-row" style="margin-top:14px;">
+          <div class="field">
+            <label for="data">Data</label>
+            <input id="data" type="text" value="25 Mai 2025">
+          </div>
+          <div class="field">
+            <label for="horario">Horário</label>
+            <input id="horario" type="text" value="10:00">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="passageiros">Passageiros</label>
+            <input id="passageiros" type="number" value="4" min="1">
+          </div>
+          <div class="field">
+            <label for="tipo">Tipo</label>
+            <select id="tipo">
+              <option>Jato</option>
+              <option>Helicóptero</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="search-submit">Buscar voos</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- RESULTADOS / FROTA -->
+  <section id="frota">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Resultados · São Paulo → Miami</span>
+        <h2>Uma frota selecionada para cada tipo de missão.</h2>
+        <p>Cada aeronave é avaliada por alcance, conforto de cabine e histórico de manutenção antes de entrar no catálogo.</p>
+      </div>
+
+      <div class="fleet-grid">
+        <!-- Card 1 -->
+        <article class="plane-card featured">
+          <div class="plane-visual sky-a">
+            <span class="badge">Recomendado</span>
+            <svg viewBox="0 0 240 110" fill="none">
+              <ellipse class="cloud" cx="40" cy="20" rx="26" ry="7" fill="#fff"/>
+              <ellipse class="cloud" cx="205" cy="85" rx="30" ry="8" fill="#fff"/>
+              <!-- wing -->
+              <path d="M118 62 L78 92 L90 93 L128 66 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.2"/>
+              <!-- fuselage -->
+              <path d="M18 58 C22 46 46 40 78 39 L168 37 C196 37 214 42 228 49 C230 51 229 54 225 55 L170 60 L78 65 C46 66 26 62 18 58 Z" fill="rgba(228,206,156,0.14)" stroke="#C6A15B" stroke-width="1.4"/>
+              <!-- nose accent -->
+              <path d="M18 58 C15 54 15 50 20 47" stroke="#C6A15B" stroke-width="1.2"/>
+              <!-- tail fin + T-tail -->
+              <path d="M196 40 L206 14 L213 15 L207 39 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.2"/>
+              <path d="M203 15 L229 8 L230 11 L205 18 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.1"/>
+              <!-- rear engine -->
+              <ellipse cx="183" cy="53" rx="13" ry="5.5" fill="rgba(10,22,40,0.6)" stroke="#C6A15B" stroke-width="1"/>
+              <!-- windows -->
+              <circle cx="55" cy="49" r="1.4" fill="#E4CE9C"/><circle cx="65" cy="48" r="1.4" fill="#E4CE9C"/><circle cx="75" cy="47.5" r="1.4" fill="#E4CE9C"/><circle cx="85" cy="47" r="1.4" fill="#E4CE9C"/><circle cx="95" cy="46.5" r="1.4" fill="#E4CE9C"/><circle cx="105" cy="46" r="1.4" fill="#E4CE9C"/><circle cx="115" cy="45.5" r="1.4" fill="#E4CE9C"/><circle cx="125" cy="45" r="1.4" fill="#E4CE9C"/><circle cx="135" cy="44.5" r="1.4" fill="#E4CE9C"/><circle cx="145" cy="44" r="1.4" fill="#E4CE9C"/>
+            </svg>
+          </div>
+          <div class="plane-body">
+            <div>
+              <h4>Gulfstream G650ER</h4>
+              <div class="plane-sub">Ultra Long Range · até 18 passageiros</div>
+            </div>
+            <div class="plane-stats">
+              <div>Tempo estimado<b>7h 30m</b></div>
+              <div class="plane-price">Valor aproximado<b>$ 128.500</b></div>
+            </div>
+            <button class="book-btn">Reservar</button>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="plane-card">
+          <div class="plane-visual sky-b">
+            <svg viewBox="0 0 240 110" fill="none">
+              <ellipse class="cloud" cx="55" cy="80" rx="24" ry="6" fill="#fff"/>
+              <ellipse class="cloud" cx="195" cy="22" rx="22" ry="6" fill="#fff"/>
+              <!-- wing with raked tip -->
+              <path d="M105 60 L60 90 L70 93 L98 78 L128 64 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.2"/>
+              <path d="M60 90 L52 96 L58 97 L70 93 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1"/>
+              <!-- fuselage, longer slender nose -->
+              <path d="M14 57 C20 47 42 41 76 40 L172 38 C198 38 213 43 226 50 C228 52 227 55 223 56 L172 60 L76 64 C42 65 22 61 14 57 Z" fill="rgba(228,206,156,0.14)" stroke="#C6A15B" stroke-width="1.4"/>
+              <path d="M14 57 C11 53 12 49 17 46" stroke="#C6A15B" stroke-width="1.2"/>
+              <!-- swept T-tail -->
+              <path d="M198 41 L212 16 L219 18 L209 40 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.2"/>
+              <path d="M209 18 L232 13 L233 16 L211 21 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.1"/>
+              <!-- rear engine -->
+              <ellipse cx="186" cy="54" rx="13" ry="5.5" fill="rgba(10,22,40,0.6)" stroke="#C6A15B" stroke-width="1"/>
+              <!-- windows -->
+              <circle cx="50" cy="50" r="1.4" fill="#E4CE9C"/><circle cx="60" cy="49" r="1.4" fill="#E4CE9C"/><circle cx="70" cy="48.5" r="1.4" fill="#E4CE9C"/><circle cx="80" cy="48" r="1.4" fill="#E4CE9C"/><circle cx="90" cy="47.5" r="1.4" fill="#E4CE9C"/><circle cx="100" cy="47" r="1.4" fill="#E4CE9C"/><circle cx="110" cy="46.5" r="1.4" fill="#E4CE9C"/><circle cx="120" cy="46" r="1.4" fill="#E4CE9C"/><circle cx="130" cy="45.5" r="1.4" fill="#E4CE9C"/><circle cx="140" cy="45" r="1.4" fill="#E4CE9C"/><circle cx="150" cy="44.5" r="1.4" fill="#E4CE9C"/>
+            </svg>
+          </div>
+          <div class="plane-body">
+            <div>
+              <h4>Bombardier Global 7500</h4>
+              <div class="plane-sub">Ultra Long Range · até 19 passageiros</div>
+            </div>
+            <div class="plane-stats">
+              <div>Tempo estimado<b>7h 45m</b></div>
+              <div class="plane-price">Valor aproximado<b>$ 115.000</b></div>
+            </div>
+            <button class="book-btn">Reservar</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="plane-card">
+          <div class="plane-visual sky-c">
+            <svg viewBox="0 0 240 110" fill="none">
+              <ellipse class="cloud" cx="70" cy="24" rx="24" ry="6" fill="#fff"/>
+              <ellipse class="cloud" cx="180" cy="86" rx="22" ry="6" fill="#fff"/>
+              <!-- wing -->
+              <path d="M112 62 L74 88 L84 90 L120 66 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.2"/>
+              <!-- fuselage, shorter, drooped nose -->
+              <path d="M22 58 C24 48 44 42 72 41 L150 39 C176 39 192 43 204 49 C206 51 205 53 202 54 L150 58 L72 63 C44 64 26 61 22 58 Z" fill="rgba(228,206,156,0.14)" stroke="#C6A15B" stroke-width="1.4"/>
+              <path d="M22 58 C18 55 18 51 24 47" stroke="#C6A15B" stroke-width="1.2"/>
+              <!-- T-tail -->
+              <path d="M178 41 L188 16 L195 17 L189 40 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.2"/>
+              <path d="M185 17 L208 11 L209 14 L187 20 Z" fill="rgba(228,206,156,0.10)" stroke="#C6A15B" stroke-width="1.1"/>
+              <!-- trijet: centerline engine at tail base -->
+              <ellipse cx="182" cy="48" rx="9" ry="4.5" fill="rgba(10,22,40,0.6)" stroke="#C6A15B" stroke-width="1"/>
+              <!-- two rear-fuselage side engines -->
+              <ellipse cx="160" cy="56" rx="11" ry="5" fill="rgba(10,22,40,0.6)" stroke="#C6A15B" stroke-width="1"/>
+              <ellipse cx="160" cy="66" rx="11" ry="5" fill="rgba(10,22,40,0.6)" stroke="#C6A15B" stroke-width="1"/>
+              <!-- windows -->
+              <circle cx="58" cy="51" r="1.4" fill="#E4CE9C"/><circle cx="68" cy="50" r="1.4" fill="#E4CE9C"/><circle cx="78" cy="49.5" r="1.4" fill="#E4CE9C"/><circle cx="88" cy="49" r="1.4" fill="#E4CE9C"/><circle cx="98" cy="48.5" r="1.4" fill="#E4CE9C"/><circle cx="108" cy="48" r="1.4" fill="#E4CE9C"/><circle cx="118" cy="47.5" r="1.4" fill="#E4CE9C"/><circle cx="128" cy="47" r="1.4" fill="#E4CE9C"/>
+            </svg>
+          </div>
+          <div class="plane-body">
+            <div>
+              <h4>Dassault Falcon 8X</h4>
+              <div class="plane-sub">Long Range · até 16 passageiros</div>
+            </div>
+            <div class="plane-stats">
+              <div>Tempo estimado<b>8h 10m</b></div>
+              <div class="plane-price">Valor aproximado<b>$ 98.000</b></div>
+            </div>
+            <button class="book-btn">Reservar</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALHES -->
+  <section class="light">
+    <div class="wrap spotlight">
+      <div class="spotlight-visual">
+        <svg viewBox="0 0 260 130" fill="none">
+          <ellipse cx="45" cy="30" rx="30" ry="8" fill="#C6A15B" opacity="0.08"/>
+          <ellipse cx="220" cy="100" rx="34" ry="9" fill="#C6A15B" opacity="0.08"/>
+          <path d="M130 78 L82 112 L96 114 L140 84 Z" fill="rgba(198,161,91,0.08)" stroke="#C6A15B" stroke-width="1.3"/>
+          <path d="M18 70 L172 62 L246 51 L253 56 L180 66 L82 76 L18 72 Z" fill="rgba(198,161,91,0.10)" stroke="#C6A15B" stroke-width="1.5"/>
+          <path d="M18 70 C13 65 14 60 21 55" stroke="#C6A15B" stroke-width="1.3"/>
+          <path d="M212 53 L226 20 L235 21 L227 52 Z" fill="rgba(198,161,91,0.08)" stroke="#C6A15B" stroke-width="1.3"/>
+          <path d="M222 21 L252 13 L253 17 L224 25 Z" fill="rgba(198,161,91,0.08)" stroke="#C6A15B" stroke-width="1.2"/>
+          <ellipse cx="197" cy="66" rx="15" ry="6.5" fill="rgba(10,22,40,0.5)" stroke="#C6A15B" stroke-width="1.1"/>
+          <circle cx="55" cy="61" r="1.7" fill="#E4CE9C"/><circle cx="68" cy="60" r="1.7" fill="#E4CE9C"/><circle cx="81" cy="59" r="1.7" fill="#E4CE9C"/><circle cx="94" cy="58" r="1.7" fill="#E4CE9C"/><circle cx="107" cy="57" r="1.7" fill="#E4CE9C"/><circle cx="120" cy="56" r="1.7" fill="#E4CE9C"/><circle cx="133" cy="55" r="1.7" fill="#E4CE9C"/><circle cx="146" cy="54" r="1.7" fill="#E4CE9C"/><circle cx="159" cy="53" r="1.7" fill="#E4CE9C"/>
+        </svg>
+      </div>
+      <div>
+        <div class="rating-pill">★★★★★ 4,9 · 124 avaliações</div>
+        <span class="eyebrow" style="margin-bottom:14px; display:flex;">Detalhes da aeronave</span>
+        <h2 style="font-size:32px; margin-top:14px;">Gulfstream G650ER</h2>
+        <p style="color:#5B6472; margin-top:10px; max-width:440px;">A referência em alcance e silêncio de cabine — voa São Paulo–Miami sem escalas, com gabinete de trabalho completo a bordo.</p>
+
+        <div class="spec-list">
+          <div class="spec-item"><span>Fabricante</span><b>Gulfstream Aerospace</b></div>
+          <div class="spec-item"><span>Ano</span><b>2021</b></div>
+          <div class="spec-item"><span>Velocidade</span><b>Mach 0.90</b></div>
+          <div class="spec-item"><span>Alcance</span><b>12.964 km</b></div>
+        </div>
+
+        <div class="amenities">
+          <div class="amenity">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8C7038" stroke-width="1.3"><path d="M2 8.5C6 4.5 18 4.5 22 8.5M5 12C8 9.5 16 9.5 19 12M8.5 15.5C10 14.2 14 14.2 15.5 15.5M12 19h.01"/></svg>
+            Wi-Fi a bordo
+          </div>
+          <div class="amenity">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8C7038" stroke-width="1.3"><path d="M6 3h12l-1 9a5 5 0 01-10 0L6 3z"/><path d="M12 16v5M8 21h8"/></svg>
+            Bar completo
+          </div>
+          <div class="amenity">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8C7038" stroke-width="1.3"><rect x="3" y="7" width="18" height="11" rx="1"/><path d="M8 7V5a4 4 0 018 0v2"/></svg>
+            Reunião a bordo
+          </div>
+        </div>
+
+        <a href="#" class="btn-primary" style="margin-top:32px;">Reservar agora →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section id="processo">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Da busca ao embarque, em quatro etapas.</h2>
+        <p>O mesmo fluxo do aplicativo, pensado para a web: pesquise, compare, confirme e acompanhe sua reserva em tempo real.</p>
+      </div>
+    </div>
+    <div class="wrap" style="padding:0;">
+      <div class="process-track">
+        <div class="process-step">
+          <div class="num">01</div>
+          <h4>Buscar</h4>
+          <p>Informe destino, data, horário e número de passageiros para ver a frota disponível.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">02</div>
+          <h4>Comparar</h4>
+          <p>Filtre por menor preço, velocidade, luxo ou autonomia e veja detalhes de cada aeronave.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">03</div>
+          <h4>Confirmar</h4>
+          <p>Revise o resumo da viagem, os serviços inclusos e conclua o pagamento com segurança.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">04</div>
+          <h4>Embarcar</h4>
+          <p>Receba o código da reserva, acompanhe o horário e a tripulação até a decolagem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBROS / CONFIANÇA -->
+  <section id="membros">
+    <div class="wrap trust-grid">
+      <div class="member-card">
+        <div class="member-top">
+          <div>
+            <span class="tier">Executive Black</span>
+            <h3 style="margin-top:8px; font-size:22px;">Ricardo Almeida</h3>
+          </div>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="member-stats">
+          <div><b>128.750</b><span>km voados</span></div>
+          <div><b>345 h</b><span>economizadas</span></div>
+        </div>
+        <div style="margin-top:30px; border-top:1px solid rgba(198,161,91,0.25); padding-top:20px; font-size:13px; color:var(--ink-500);">
+          Código da última reserva
+          <div class="mono" style="color:var(--gold-300); font-size:16px; margin-top:6px; letter-spacing:0.04em;">VX25G650ER</div>
+        </div>
+      </div>
+
+      <div>
+        <span class="eyebrow">Por que voar com a gente</span>
+        <h2 style="margin-top:16px; font-size:32px;">Cada detalhe pensado para quem não pode perder tempo.</h2>
+        <div class="trust-list" style="margin-top:34px;">
+          <div class="trust-item">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.4"><path d="M12 2l2.4 6.5L21 10l-5 4.2L17.5 21 12 17.3 6.5 21 8 14.2 3 10l6.6-1.5z"/></svg></div>
+            <div><h4>Concierge exclusivo</h4><p>Um único ponto de contato do primeiro pedido ao pouso.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.4"><rect x="3" y="11" width="18" height="10" rx="1"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+            <div><h4>Pagamento 100% seguro</h4><p>Transações protegidas e confirmação instantânea da reserva.</p></div>
+          </div>
+          <div class="trust-item">
+            <div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C6A15B" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+            <div><h4>Atendimento VIP 24h</h4><p>Suporte disponível a qualquer hora, em qualquer fuso.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L13.5 9.5L21 8L14.5 13L18 20L12 16.5L6 20L9.5 13L3 8L10.5 9.5L12 2Z" stroke="#C6A15B" stroke-width="1.1" stroke-linejoin="round"/></svg>
+          <span class="brand-text">VOO EXECUTIVO<span>TEMPO É PODER</span></span>
+        </a>
+        <p>Aviação executiva sob demanda, com frota selecionada e concierge dedicado em cada reserva.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#frota">Frota</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#membros">Membros</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Segurança</a></li>
+          <li><a href="#">Carreiras</a></li>
+          <li><a href="#">Imprensa</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Suporte</h5>
+        <ul>
+          <li><a href="#">Central de ajuda</a></li>
+          <li><a href="#">Fale conosco</a></li>
+          <li><a href="#">Termos</a></li>
+          <li><a href="#">Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Voo Executivo. Todos os direitos reservados.</span>
+      <span>Feito para quem mede tempo em decolagens.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.book-btn').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      document.getElementById('membros').scrollIntoView({behavior:'smooth'});
+    });
+  });
+  document.getElementById('buscar').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('frota').scrollIntoView({behavior:'smooth'});
+  });
+</script>
+
+</body>
+</html>
